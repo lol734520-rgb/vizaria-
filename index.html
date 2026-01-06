@@ -30,8 +30,6 @@
       color: var(--text);
       overflow-x: hidden;
     }
-
-    /* Анимированный фон */
     .background {
       position: fixed;
       top: 0;
@@ -506,32 +504,21 @@
         для первых пользователей особые бонусы! ✨
       </div>
     </div>
-
-    <!-- Кнопка уведомления -->
     <button class="notify-btn fade-in" id="notifyBtn" onclick="notifyMe()">
       <span>🔔</span>
       <span>Уведомить о запуске</span>
     </button>
-
-    <!-- Футер -->
     <div class="footer fade-in">
       С любовью от команды <a href="#">Vizariya</a> 💜
     </div>
   </div>
 
   <script>
-    // Telegram WebApp
     const tg = window.Telegram?.WebApp;
     if (tg) {
       tg.ready();
       tg.expand();
     }
-
-    // =====================================================
-    // ДАТЫ - ИСПРАВЛЕНО НА 2026 ГОД!
-    // =====================================================
-    
-    // Дата запуска: 20 января 2026, 00:00:00
     const launchDate = new Date('2026-01-20T00:00:00').getTime();
     
     // Начальная дата (6 января 2026) для расчёта прогресса
@@ -565,8 +552,6 @@
         document.getElementById('seconds').textContent = '00';
         document.getElementById('progress-percent').textContent = '100%';
         document.getElementById('progress-fill').style.width = '100%';
-        
-        // Меняем заголовок
         document.querySelector('.title h1').textContent = '🎉 Мы запустились!';
         document.querySelector('.title p').textContent = 'Добро пожаловать в Vizariya!';
         
@@ -591,16 +576,12 @@
       document.getElementById('progress-percent').textContent = Math.round(progress) + '%';
       document.getElementById('progress-fill').style.width = progress + '%';
     }
-
-    // Запускаем таймер
     updateTimer();
     setInterval(updateTimer, 1000);
 
     // Кнопка уведомления
     function notifyMe() {
       const btn = document.getElementById('notifyBtn');
-      
-      // Отправляем данные в бот
       if (tg && tg.sendData) {
         tg.sendData(JSON.stringify({ action: 'notify_launch' }));
       }
@@ -645,8 +626,6 @@
         }, i * 30);
       }
     }
-
-    // Обработка закрытия (для Telegram)
     if (tg) {
       tg.onEvent('viewportChanged', () => {
         if (!tg.isExpanded) {
