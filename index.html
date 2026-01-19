@@ -112,21 +112,21 @@
 
     /* Логотип */
     .logo {
-      margin-top: 30px;
-      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-bottom: 15px;
       text-align: center;
     }
 
     .logo-icon {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 24px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
-      margin: 0 auto 15px;
+      font-size: 35px;
+      margin: 0 auto 12px;
       box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
       animation: logoPulse 3s ease-in-out infinite;
     }
@@ -137,7 +137,7 @@
     }
 
     .logo-text {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 800;
       background: linear-gradient(135deg, #fff, rgba(255,255,255,0.8));
       -webkit-background-clip: text;
@@ -152,7 +152,7 @@
     }
 
     .title h1 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       margin-bottom: 8px;
       background: linear-gradient(135deg, #fff, var(--secondary));
@@ -163,38 +163,72 @@
 
     .title p {
       color: var(--text-muted);
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.5;
+    }
+
+    /* Блок извинения */
+    .sorry-card {
+      width: 100%;
+      max-width: 380px;
+      margin: 15px 0;
+      padding: 18px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .sorry-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .sorry-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .sorry-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .sorry-text strong {
+      color: #fff;
     }
 
     /* Таймер */
     .timer-section {
       width: 100%;
       max-width: 380px;
-      margin: 30px 0;
+      margin: 20px 0;
     }
 
     .timer-label {
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-transform: uppercase;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
     .timer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      gap: 10px;
     }
 
     .timer-block {
       background: var(--bg-card);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 20px 10px;
+      border-radius: 16px;
+      padding: 15px 8px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -211,19 +245,19 @@
     }
 
     .timer-value {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 800;
       background: linear-gradient(135deg, #fff, var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-variant-numeric: tabular-nums;
     }
 
     .timer-unit {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -233,19 +267,19 @@
     .progress-section {
       width: 100%;
       max-width: 380px;
-      margin: 20px 0;
+      margin: 15px 0;
     }
 
     .progress-info {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 10px;
-      font-size: 13px;
+      margin-bottom: 8px;
+      font-size: 12px;
       color: var(--text-muted);
     }
 
     .progress-bar {
-      height: 8px;
+      height: 6px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
       overflow: hidden;
@@ -279,29 +313,31 @@
     /* Дата запуска */
     .launch-date {
       text-align: center;
-      margin: 25px 0;
-      padding: 20px;
+      margin: 15px 0;
+      padding: 18px;
       background: var(--bg-card);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
+      border-radius: 16px;
       width: 100%;
       max-width: 380px;
     }
 
     .launch-date-icon {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
     .launch-date-text {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
       margin-bottom: 5px;
     }
 
     .launch-date-value {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       background: linear-gradient(135deg, var(--accent), var(--secondary));
       -webkit-background-clip: text;
@@ -309,58 +345,56 @@
       background-clip: text;
     }
 
+    .launch-date-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
     /* Благодарность */
     .thanks-card {
       width: 100%;
       max-width: 380px;
-      padding: 25px;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+      margin: 15px 0;
+      padding: 18px;
+      background: var(--bg-card);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
       text-align: center;
-      margin: 20px 0;
     }
 
     .thanks-icon {
-      font-size: 50px;
-      margin-bottom: 15px;
-      animation: heartBeat 2s infinite;
-    }
-
-    @keyframes heartBeat {
-      0%, 100% { transform: scale(1); }
-      15% { transform: scale(1.15); }
-      30% { transform: scale(1); }
-      45% { transform: scale(1.1); }
-      60% { transform: scale(1); }
-    }
-
-    .thanks-title {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
+    .thanks-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
     .thanks-text {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     /* Кнопка уведомления */
     .notify-btn {
       width: 100%;
       max-width: 380px;
-      padding: 18px 30px;
+      padding: 16px 28px;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       border: none;
-      border-radius: 16px;
+      border-radius: 14px;
       color: white;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
-      margin: 20px 0;
+      margin: 15px 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -386,10 +420,10 @@
     /* Футер */
     .footer {
       margin-top: auto;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .footer a {
@@ -410,6 +444,7 @@
     .fade-in:nth-child(5) { animation-delay: 0.5s; }
     .fade-in:nth-child(6) { animation-delay: 0.6s; }
     .fade-in:nth-child(7) { animation-delay: 0.7s; }
+    .fade-in:nth-child(8) { animation-delay: 0.8s; }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -453,6 +488,17 @@
       <p>Мы готовим для вас что-то особенное!</p>
     </div>
 
+    <!-- Блок извинения -->
+    <div class="sorry-card fade-in">
+      <div class="sorry-icon">⚠️</div>
+      <div class="sorry-title">Дата запуска перенесена</div>
+      <div class="sorry-text">
+        Приносим искренние извинения! Нам потребовалось больше времени для доработки платформы. 
+        <strong>Новая дата — 5 февраля 2026</strong>. 
+        Благодарим за понимание! 🙏
+      </div>
+    </div>
+
     <!-- Таймер -->
     <div class="timer-section fade-in">
       <div class="timer-label">Обратный отсчёт</div>
@@ -490,24 +536,27 @@
     <!-- Дата запуска -->
     <div class="launch-date fade-in">
       <div class="launch-date-icon">📅</div>
-      <div class="launch-date-text">Дата запуска</div>
-      <div class="launch-date-value">20 января 2026</div>
+      <div class="launch-date-text">Новая дата запуска</div>
+      <div class="launch-date-value">5 февраля 2026</div>
+      <div class="launch-date-note">Ранее планировалось 20 января</div>
     </div>
 
     <!-- Благодарность -->
     <div class="thanks-card fade-in">
       <div class="thanks-icon">💜</div>
-      <div class="thanks-title">Мы ценим вас!</div>
+      <div class="thanks-title">Спасибо за терпение!</div>
       <div class="thanks-text">
-        Спасибо, что вы с нами с самого начала! 
-        Вы — часть нашей истории, и мы подготовили 
-        для первых пользователей особые бонусы! ✨
+        Мы ценим каждого из вас! Дополнительное время позволит сделать 
+        Vizariya ещё лучше. Для первых пользователей подготовлены 
+        особые бонусы! ✨
       </div>
     </div>
+
     <button class="notify-btn fade-in" id="notifyBtn" onclick="notifyMe()">
       <span>🔔</span>
       <span>Уведомить о запуске</span>
     </button>
+
     <div class="footer fade-in">
       С любовью от команды <a href="#">Vizariya</a> 💜
     </div>
@@ -519,11 +568,13 @@
       tg.ready();
       tg.expand();
     }
-    const launchDate = new Date('2026-01-20T00:00:00').getTime();
+
+    // ===== НОВАЯ ДАТА: 5 ФЕВРАЛЯ 2026 =====
+    const launchDate = new Date('2026-02-05T00:00:00').getTime();
     
-    // Начальная дата (6 января 2026) для расчёта прогресса
-    const startDate = new Date('2026-01-06T00:00:00').getTime();
-    const totalTime = launchDate - startDate; // 14 дней в мс
+    // Начальная дата для расчёта прогресса (11 января 2026)
+    const startDate = new Date('2026-01-11T00:00:00').getTime();
+    const totalTime = launchDate - startDate;
 
     // Создаём частицы
     function createParticles() {
@@ -554,6 +605,10 @@
         document.getElementById('progress-fill').style.width = '100%';
         document.querySelector('.title h1').textContent = '🎉 Мы запустились!';
         document.querySelector('.title p').textContent = 'Добро пожаловать в Vizariya!';
+        
+        // Скрыть блок извинения
+        const sorryCard = document.querySelector('.sorry-card');
+        if (sorryCard) sorryCard.style.display = 'none';
         
         // Показать конфетти
         showConfetti();
@@ -600,11 +655,11 @@
       if (tg && tg.showPopup) {
         tg.showPopup({
           title: '🔔 Готово!',
-          message: 'Мы уведомим вас, когда Vizariya запустится!',
+          message: 'Мы уведомим вас, когда Vizariya запустится 5 февраля!',
           buttons: [{ type: 'ok' }]
         });
       } else {
-        alert('🔔 Готово! Мы уведомим вас, когда Vizariya запустится!');
+        alert('🔔 Готово! Мы уведомим вас, когда Vizariya запустится 5 февраля!');
       }
     }
 
@@ -626,6 +681,7 @@
         }, i * 30);
       }
     }
+
     if (tg) {
       tg.onEvent('viewportChanged', () => {
         if (!tg.isExpanded) {
